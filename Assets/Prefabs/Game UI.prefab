@@ -125,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4873308763159825000}
   - component: {fileID: 276694901920904823}
+  - component: {fileID: 907282624758001083}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -203,6 +204,24 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &907282624758001083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860777595163269827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4928078b74a59ce4f91df84d66111507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueToTextMap:
+  - Paused
+  - Normal
+  - Fast
+  - Super Fast
+  simulationSpeedText: {fileID: 381002744546137080}
 --- !u!1 &2129076630902983391
 GameObject:
   m_ObjectHideFlags: 0
