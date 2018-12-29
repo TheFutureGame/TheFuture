@@ -10,7 +10,7 @@ public class UIInit : MonoBehaviour
     {
         if (uiInstance != null && uiInstance != gameObject)
         {
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
         }
         else
         {

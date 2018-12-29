@@ -196,7 +196,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1770467944524441925}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3
+  m_MaxValue: 4
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -221,6 +221,7 @@ MonoBehaviour:
   - Normal
   - Fast
   - Super Fast
+  - Incredibly Fast
   simulationSpeedText: {fileID: 381002744546137080}
 --- !u!1 &2129076630902983391
 GameObject:
