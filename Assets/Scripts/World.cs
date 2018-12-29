@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // represents simulated World
-public class World : Singleton<World>
+public class World : MonoBehaviour
 {
     public float simulationSpeed;
     public float defaultSimulationSpeed = 1;
+
+    public static World currentWorld
+    {
+        get
+        {
+            return GameObject.FindGameObjectWithTag("GameController").GetComponent<World>();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
