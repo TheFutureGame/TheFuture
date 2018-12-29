@@ -2,27 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class UIManager : Singleton<UIManager>
-{
-    public GameObject uiInstance;
-}
-
 public class UIInit : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    private static GameObject uiInstance;
+
     private void Awake()
     {
-        var uiManager = UIManager.Instance;
-        if (uiManager.uiInstance != null && uiManager.uiInstance != gameObject)
+        if (uiInstance != null && uiInstance != gameObject)
         {
             Destroy(gameObject);
         }
         else
         {
-            DontDestroyOnLoad(uiManager.uiInstance = gameObject);
+            DontDestroyOnLoad(uiInstance = gameObject);
         }
     }
 }
