@@ -13,12 +13,13 @@ public class SimulationSpeedSlider : MonoBehaviour
     void Start()
     {
         var slider = GetComponent<Slider>();
-        SetSimulationSpeedText(slider.value);
-        slider.onValueChanged.AddListener(SetSimulationSpeedText);
+        SetSimulationSpeed(slider.value);
+        slider.onValueChanged.AddListener(SetSimulationSpeed);
     }
 
-    void SetSimulationSpeedText(float value)
+    void SetSimulationSpeed(float value)
     {
+        Globals.simulationSpeed = value;
         int intValue = (int)value;
         if (valueToTextMap.Length > 0 && intValue >= 0 && intValue < valueToTextMap.Length)
         {
