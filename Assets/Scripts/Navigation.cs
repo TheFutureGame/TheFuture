@@ -14,17 +14,28 @@ public class Navigation : MonoBehaviour
     {
         openGlobeButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("Globe", LoadSceneMode.Single);
+            LoadScene("Globe");
         });
         openSampleSceneButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            LoadScene("SampleScene");
         });
     }
 
-    // Update is called once per frame
-    void Update()
+    void LoadScene(string sceneName)
     {
-        
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+
+        /*Scene scene = SceneManager.GetSceneByName(sceneName);
+        if (scene != null)
+        {
+            if (!scene.isLoaded)
+            {
+                SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+                scene = SceneManager.GetSceneByName(sceneName);
+            }
+            
+            SceneManager.SetActiveScene(scene);
+        }*/
     }
 }
