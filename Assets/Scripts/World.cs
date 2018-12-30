@@ -7,6 +7,7 @@ public class World : MonoBehaviour
 {
     public float simulationSpeed;
     public float defaultSimulationSpeed = 1;
+    public float breedingPeriodSeconds;
 
     public static World currentWorld
     {
