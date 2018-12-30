@@ -38,8 +38,8 @@ public class Region : MonoBehaviour
                 continue;
             }
 
-            numberOfMen += (int)Random.Range(populationGrowth.x, populationGrowth.y);
-            numberOfWomen += (int)Random.Range(populationGrowth.x, populationGrowth.y);
+            numberOfMen += (int)(Random.Range(populationGrowth.x, populationGrowth.y) * world.simulationSpeed);
+            numberOfWomen += (int)(Random.Range(populationGrowth.x, populationGrowth.y) * world.simulationSpeed);
 
             if (numberOfMen < 0)
             {
