@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Region : MonoBehaviour
 {
-    public int numberOfMen;
-    public int numberOfWomen;
-    public Vector2Int populationGrowth;
+    public RegionData data;
 
     // shows that this region has some men and women in it
     public bool isAlive
@@ -18,10 +17,11 @@ public class Region : MonoBehaviour
     }
 
     private World world;
-    private bool _isAlive = true;
+    private bool _isAlive;
 
     void Start()
     {
+        _isAlive = data.numberOfMen > 0 && data.numberOfWomen > 0;
         world = World.currentWorld;
         StartCoroutine(Breeding());
     }
@@ -31,23 +31,23 @@ public class Region : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(world.breedingPeriodSeconds);
-            _isAlive = numberOfMen > 0 && numberOfWomen > 0;
+            _isAlive = data.numberOfMen > 0 && data.numberOfWomen > 0;
 
             if (!_isAlive)
             {
                 continue;
             }
 
-            numberOfMen += (int)(Random.Range(populationGrowth.x, populationGrowth.y) * world.simulationSpeed);
-            numberOfWomen += (int)(Random.Range(populationGrowth.x, populationGrowth.y) * world.simulationSpeed);
+            data.numberOfMen += (int)(Random.Range(data.populationGrowth.x, data.populationGrowth.y) * world.simulationSpeed);
+            data.numberOfWomen += (int)(Random.Range(data.populationGrowth.x, data.populationGrowth.y) * world.simulationSpeed);
 
-            if (numberOfMen < 0)
+            if (data.numberOfMen < 0)
             {
-                numberOfMen = 0;
+                data.numberOfMen = 0;
             }
-            if (numberOfWomen < 0)
+            if (data.numberOfWomen < 0)
             {
-                numberOfWomen = 0;
+                data.numberOfWomen = 0;
             }
         }
     }

@@ -1,0 +1,31 @@
+{
+	"countries": [
+		{
+			"countryName": "United States of America",
+			"regions": [
+				{
+					"regionName": "California",
+					"numberOfMen": 19268904,
+					"numberOfWomen": 19533596,
+					"populationGrowth": {
+						"x": -100,
+						"y": 160
+					},
+					"latitude": 37.1843034,
+					"longitude": -123.7975979
+				},
+				{
+					"regionName": "Texas",
+					"numberOfMen": 100,
+					"numberOfWomen": 100,
+					"populationGrowth": {
+						"x": -10,
+						"y": 10
+					},
+					"latitude": 31.090966,
+					"longitude": -104.5677971
+				}
+			]
+		}
+	]
+}
