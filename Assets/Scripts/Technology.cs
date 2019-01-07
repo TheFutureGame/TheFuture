@@ -4,9 +4,11 @@ using UnityEngine;
 
 public enum TechnologyType
 {
+    BrainComputerInterface,
     Turrets,
 }
 
+[System.Serializable]
 public class Technology
 {
     public float researchCost;
