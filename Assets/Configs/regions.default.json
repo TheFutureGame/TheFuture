@@ -24,6 +24,17 @@
 					},
 					"latitude": 31.090966,
 					"longitude": -104.5677971
+				},
+				{
+					"regionName": "Zero",
+					"numberOfMen": 100,
+					"numberOfWomen": 100,
+					"populationGrowth": {
+						"x": -10,
+						"y": 10
+					},
+					"latitude": 0,
+					"longitude": 0
 				}
 			]
 		}
