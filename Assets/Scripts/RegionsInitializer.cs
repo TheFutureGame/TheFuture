@@ -17,7 +17,7 @@ public class RegionsInitializer : MonoBehaviour
 
     void Start()
     {
-        regionsConfig =  JsonUtility.FromJson<RegionsConfig>(defaultData.text);
+        regionsConfig = JsonUtility.FromJson<RegionsConfig>(defaultData.text);
 
         foreach (var countryData in regionsConfig.countries)
         {
@@ -28,8 +28,7 @@ public class RegionsInitializer : MonoBehaviour
             {
                 var regionGameObject = Instantiate(regionPrefab);
                 regionGameObject.name = regionData.regionName;
-                // regionGameObject.transform.rotation = Quaternion.Euler(0, -regionData.latitude, regionData.longitude);
-                regionGameObject.transform.rotation = Quaternion.Euler(0, -regionData.longitude , regionData.latitude);
+                regionGameObject.transform.rotation = Quaternion.Euler(0, -regionData.longitude, regionData.latitude);
 
                 var regionComponent = regionGameObject.AddComponent<Region>();
                 regionComponent.data = regionData;
@@ -38,11 +37,5 @@ public class RegionsInitializer : MonoBehaviour
 
             countryGameObject.transform.parent = countriesHolder.transform;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

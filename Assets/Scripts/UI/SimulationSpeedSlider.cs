@@ -13,7 +13,7 @@ public class SimulationSpeedSlider : MonoBehaviour
     private void Start()
     {
         var slider = GetComponent<Slider>();
-        slider.value = World.currentWorld.defaultSimulationSpeed;
+        slider.value = World.CurrentWorld.defaultSimulationSpeed;
         SetSimulationSpeed(slider.value);
         slider.onValueChanged.AddListener(SetSimulationSpeed);
     }
@@ -24,7 +24,7 @@ public class SimulationSpeedSlider : MonoBehaviour
         if (valueToTextMap.Length > 0 && intValue >= 0 && intValue < valueToTextMap.Length)
         {
             simulationSpeedText.text = valueToTextMap[intValue];
-            World.currentWorld.simulationSpeed = value;
+            World.CurrentWorld.simulationSpeed = value;
         }
     }
 }

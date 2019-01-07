@@ -22,7 +22,7 @@ public class Region : MonoBehaviour
     void Start()
     {
         _isAlive = data.numberOfMen > 0 && data.numberOfWomen > 0;
-        world = World.currentWorld;
+        world = World.CurrentWorld;
         StartCoroutine(Breeding());
     }
 

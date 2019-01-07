@@ -7,18 +7,17 @@ using UnityEngine.SceneManagement;
 public class Navigation : MonoBehaviour
 {
     public Button openGlobeButton;
-    public Button openSampleSceneButton;
+    public Button researchButton;
+    public Button craftButton;
 
     // Start is called before the first frame update
     void Start()
     {
         openGlobeButton.onClick.AddListener(() =>
         {
-            LoadScene("Globe");
         });
-        openSampleSceneButton.onClick.AddListener(() =>
+        researchButton.onClick.AddListener(() =>
         {
-            LoadScene("SampleScene");
         });
     }
 
